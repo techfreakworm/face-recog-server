@@ -23,11 +23,12 @@ app.get('/api/:uid', (req, res) => {
 
     res.send("Hello " + trainDescriptorsByClass);
     res.status(200);
+    trainDescriptorsByClass = [];
 })
 
 app.post('/api', (req, res) => {
     var descriptorByClass = {
-        "descriptors": req.body.descriptors[0],
+        "descriptors": req.body.descriptors,
         "className": req.body.className
     }
 
