@@ -33,7 +33,7 @@ app.get('/api/clean/:pass', (req, res) => {
     }
 })
 
-app.post('/api', (req, res) => {
+app.post('/api/model', (req, res) => {
     var descriptorByClass = {
         "descriptors": req.body.descriptors,
         "className": req.body.className
@@ -44,7 +44,7 @@ app.post('/api', (req, res) => {
     res.send(trainDescriptorsByClass)
 })
 
-app.get('/api/getModel', (req, res) => {
+app.get('/api/model', (req, res) => {
     res.status(200)
     res.send(trainDescriptorsByClass)
 })
